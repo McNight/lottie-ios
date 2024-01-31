@@ -6,7 +6,8 @@ import QuartzCore
 // MARK: - RootAnimationLayer
 
 /// A root `CALayer` responsible for playing a Lottie animation
-protocol RootAnimationLayer: CALayer {
+@_spi(Internal)
+public protocol RootAnimationLayer: CALayer {
   var lottieAnimationLayer: LottieAnimationLayer? { get set }
 
   var currentFrame: AnimationFrameTime { get set }
@@ -45,7 +46,8 @@ protocol RootAnimationLayer: CALayer {
 
 // MARK: - AnimationKey
 
-enum AnimationKey {
+@_spi(Internal)
+public enum AnimationKey {
   /// The primary animation and its key should be managed by `LottieAnimationView`
   case managed
   /// The primary animation always uses the given key

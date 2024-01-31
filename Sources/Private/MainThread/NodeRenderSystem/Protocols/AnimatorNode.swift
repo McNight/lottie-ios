@@ -11,7 +11,8 @@ import QuartzCore
 
 /// Defines the basic outputs of an animator node.
 ///
-protocol NodeOutput {
+@_spi(Internal)
+public protocol NodeOutput {
 
   /// The parent node.
   var parent: NodeOutput? { get }
@@ -38,7 +39,8 @@ protocol NodeOutput {
 /// An animator node holds a group of interpolators. These interpolators determine
 /// if the node needs an update for the current frame.
 ///
-protocol AnimatorNode: AnyObject, KeypathSearchable {
+@_spi(Internal)
+public protocol AnimatorNode: AnyObject, KeypathSearchable {
 
   /// The available properties of the Node.
   ///

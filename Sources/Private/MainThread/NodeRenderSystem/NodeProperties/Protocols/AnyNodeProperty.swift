@@ -11,7 +11,8 @@ import Foundation
 // MARK: - AnyNodeProperty
 
 /// A property of a node. The node property holds a provider and a container
-protocol AnyNodeProperty {
+@_spi(Internal)
+public protocol AnyNodeProperty {
 
   /// Returns true if the property needs to recompute its stored value
   func needsUpdate(frame: CGFloat) -> Bool

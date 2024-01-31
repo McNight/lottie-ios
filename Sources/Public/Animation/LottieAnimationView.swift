@@ -814,9 +814,11 @@ open class LottieAnimationView: LottieAnimationViewBase {
   // MARK: Internal
 
   // The backing CALayer for this animation view.
-  let lottieAnimationLayer: LottieAnimationLayer
+  @_spi(Internal)
+  public let lottieAnimationLayer: LottieAnimationLayer
 
-  var animationLayer: RootAnimationLayer? {
+  @_spi(Internal)
+  public var animationLayer: RootAnimationLayer? {
     lottieAnimationLayer.rootAnimationLayer
   }
 

@@ -8,7 +8,8 @@
 import QuartzCore
 
 /// Protocol that provides keypath search functionality. Returns all node properties associated with a keypath.
-protocol KeypathSearchable {
+@_spi(Internal)
+public protocol KeypathSearchable {
 
   /// The name of the Keypath
   var keypathName: String { get }
